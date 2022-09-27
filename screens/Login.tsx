@@ -1,14 +1,15 @@
-import { StyleSheet } from 'react-native';
-
+import { StyleSheet, TextInput,TouchableHighlight } from 'react-native';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import GSigninButton from '../components/GoogleSignInButton'
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>BlipKart</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <GSigninButton />
     </View>
   );
 }
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   },
   separator: {
     marginVertical: 30,
-    height: 1,
+    height: 0,
     width: '80%',
   },
 });
